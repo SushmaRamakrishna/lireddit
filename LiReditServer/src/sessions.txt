@@ -1,0 +1,21 @@
+req.session.userId = user.id;
+
+{userId: 1} -> send that to redis
+
+1.
+sess:keyboardabdjdjsldfcat -> {userId:1}
+2.
+express-session will set a cookie on my browser keyboardabdjdjsldfcat
+3.
+when user makes a request, value will be sent to the server
+keyboardabdjdjsldfcat -> qw0eiuwqjoqjw 
+
+4.
+on the server it decrypt the cookie from redis
+keyboardabdjdjsldfcat -> sess:  
+
+5. 
+make a request to redis
+sess:qw0eiuwqjoqjw -> { userId: 1 }
+
+req.session = { userId: 1 }
